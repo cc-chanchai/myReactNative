@@ -1,4 +1,5 @@
 import React from 'react'
+import WhiteBox from './components/WhiteBoxIT'
 import {
   SafeAreaView,
   StyleSheet,
@@ -28,12 +29,19 @@ export default class App extends React.Component{
   }
   render(){
     return(
-      <View style={{padding: 8}}>
-        <Text>CC-CHANCHAI</Text>
-        <TextInput style={{borderColor: 'black', borderWidth:1}} onChangeText={this.handleTextInput}/>
-        <Text>{this.state.text}</Text>
+      <View style={{padding: 20}}>
+        {/* <Text>CC-CHANCHAI</Text> */}
+        {/* <TextInput style={{borderColor: 'black', borderWidth:1}} onChangeText={this.handleTextInput}/> */}
+        {/* <Text>{this.state.text}</Text> */}
         {/* <Button title={"set 'White box IT'"} onPress={() => this.setState({text: 'White Box - IT'})}></Button> */}
-        <Button title={"set 'White Box - IT'"} onPress={this.handleButtonClick}/>
+        {/* <Button title={"set 'White Box - IT'"} onPress={this.handleButtonClick}/> */}
+        
+        <WhiteBox 
+          title={'WhiteBox-IT'}
+          onChangeText={this.handleTextInput}
+          textInput={this.state.text}
+          onPressButton={this.handleButtonClick}
+        />
       </View>
     )
   }
